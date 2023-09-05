@@ -2,6 +2,8 @@ require chromium-gn.inc
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 
+PARALLEL_MAKE = "-j ${@oe.utils.cpu_count() - 1}"
+
 DEPENDS += "\
         at-spi2-atk \
         virtual/egl \
